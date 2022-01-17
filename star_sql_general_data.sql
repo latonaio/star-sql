@@ -1,6 +1,7 @@
 CREATE TABLE `star_general_data`
 (
   `CodeName`                   varchar(20) NOT NULL,
+  `Galaxy`                     varchar(20) DEFAULT NULL,
   `StarType`                   varchar(20) DEFAULT NULL,
   `Description`                varchar(40) DEFAULT NULL,
   `CalenderType`               varchar(6) DEFAULT NULL,

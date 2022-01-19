@@ -1,6 +1,6 @@
 CREATE TABLE `star_orbital_characteristic_data`
 (
-  `CodeName`                   varchar(20) NOT NULL,
+  `Star`                       varchar(20) NOT NULL,
   `Aphelion`                   varchar(20) DEFAULT NULL,
   `AphelionUnit`               varchar(5) DEFAULT NULL,
   `Perihelion`                 varchar(20) DEFAULT NULL,
@@ -24,7 +24,7 @@ CREATE TABLE `star_orbital_characteristic_data`
   `ArgumentOfPerihelionUnit`   varchar(5) DEFAULT NULL,
   `CreatedDateTime`            varchar(20) DEFAULT NULL,
   `LastModifiedDateTime`       varchar(20) DEFAULT NULL,
-    PRIMARY KEY (`CodeName`),
-    CONSTRAINT `StarOrbitalCharacteristicData_fk` FOREIGN KEY (`CodeName`) REFERENCES `star_general_data` (`CodeName`)
+    PRIMARY KEY (`Star`),
+    CONSTRAINT `StarOrbitalCharacteristicData_fk` FOREIGN KEY (`Star`) REFERENCES `star_general_data` (`Star`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;

@@ -1,6 +1,6 @@
 CREATE TABLE `star_physical_characteristic_data`
 (
-  `CodeName`                    varchar(20) NOT NULL,
+  `Star`                       varchar(20) NOT NULL,
   `Radius`                      varchar(20) DEFAULT NULL,
   `RadiusUnit`                  varchar(5) DEFAULT NULL,
   `Circumference`               varchar(20) DEFAULT NULL,
@@ -47,7 +47,7 @@ CREATE TABLE `star_physical_characteristic_data`
   `RotationVelocityUnit`        varchar(5) DEFAULT NULL,  
   `CreatedDateTime`             varchar(20) DEFAULT NULL,
   `LastModifiedDateTime`        varchar(20) DEFAULT NULL,
-    PRIMARY KEY (`CodeName`),
-    CONSTRAINT `StarPhysicalCharacteristicData_fk` FOREIGN KEY (`CodeName`) REFERENCES `star_general_data` (`CodeName`)
+    PRIMARY KEY (`Star`),
+    CONSTRAINT `StarPhysicalCharacteristicData_fk` FOREIGN KEY (`Star`) REFERENCES `star_general_data` (`Star`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;
